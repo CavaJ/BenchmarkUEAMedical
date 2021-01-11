@@ -1,0 +1,54 @@
+git clone https://github.com/alan-turing-institute/sktime.git
+
+cd sktime
+
+git checkout master
+
+git pull
+
+
+
+#if myenv does not exsit or is not created from environment.yml file
+conda create -n myenv python=3.8.5
+
+
+conda activate myenv
+
+
+
+pip install cython
+
+conda install numpy
+conda install pandas
+conda install statsmodels
+conda install scikit-learn
+conda install numba
+
+
+# Windows: download and install visual studio  build tools from https://visualstudio.microsoft.com/visual-cpp-build-tools/
+
+# Windows
+SET DISTUTILS_USE_SDK=1
+
+# Windows
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Auxiliary\Build\vcvarsall.bat" x64
+
+
+# Mac: check https://www.sktime.org/en/latest/installation.html#mac-osx
+
+
+pip install --editable .
+
+
+conda install -c conda-forge notebook
+
+pip install pmdarima
+
+conda install matplotlib
+
+pip install seaborn
+
+
+pip install sktime[all_extras]
+
+pip install tbats

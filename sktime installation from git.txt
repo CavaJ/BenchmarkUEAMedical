@@ -52,3 +52,10 @@ pip install seaborn
 pip install sktime[all_extras]
 
 pip install tbats
+
+
+conda install -c conda-forge widgetsnbextension
+
+conda install -c conda-forge ipywidgets
+
+jupyter nbextension enable --py widgetsnbextension
